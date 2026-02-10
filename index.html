@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar Luxury Jewelry | All'avanguardia</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #0a0a0a; color: white; }
+        header { background: linear-gradient(90deg, #1a1a1a, #333); padding: 20px; text-align: center; border-bottom: 2px solid #d4af37; }
+        .container { display: flex; flex-wrap: wrap; padding: 20px; }
+        
+        /* SINISTRA: Prezzi e Titolo */
+        .sidebar { flex: 1; min-width: 250px; background: #111; padding: 20px; border-right: 1px solid #333; }
+        .price-ticker { border: 1px solid #d4af37; padding: 10px; margin-top: 20px; border-radius: 5px; }
+        .price-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #222; color: #d4af37; }
+
+        /* CENTRO: Media e Video */
+        .main-content { flex: 3; padding: 20px; text-align: center; }
+        .video-container { margin-bottom: 40px; border: 3px solid #d4af37; border-radius: 10px; overflow: hidden; box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
+        video, img { width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto; }
+        .asset-title { color: #d4af37; margin-top: 10px; font-size: 1.5em; text-transform: uppercase; }
+
+        /* FOOTER: Indirizzi */
+        footer { background: #111; padding: 40px; margin-top: 40px; border-top: 1px solid #333; display: flex; justify-content: space-around; flex-wrap: wrap; }
+        .address-box { margin: 10px; min-width: 200px; }
+        .address-box h4 { color: #d4af37; border-bottom: 1px solid #d4af37; padding-bottom: 5px; }
+        .address-box p { font-size: 0.9em; color: #ccc; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>💎 GIOIELLERIA BLOCKCHAIN STELLAR 💎</h1>
+    <p>Tecnologia e Lusso in un unico Asset</p>
+</header>
+
+<div class="container">
+    <aside class="sidebar">
+        <h2>Listino Prezzi</h2>
+        <div class="price-ticker">
+            <div class="price-item"><span>FEDE</span> <span>1500 XLM</span></div>
+            <div class="price-item"><span>PERLE</span> <span>2800 XLM</span></div>
+            <div class="price-item"><span>CITIZEN</span> <span>3200 XLM</span></div>
+            <div class="price-item"><span>ANELLO</span> <span>4500 XLM</span></div>
+            <div class="price-item"><span>COLLANA</span> <span>5000 XLM</span></div>
+        </div>
+        <p style="margin-top: 30px; font-size: 0.8em; color: #888;">
+            * I prezzi sono aggiornati in tempo reale sulla rete Stellar. <br>Commissione di rete: 1% inclusa. [cite: 2026-02-04]
+        </p>
+    </aside>
+
+    <main class="main-content">
+        <section>
+            <div class="video-container">
+                <img src="gio/citizen.jpg" alt="Orologio Citizen Blockchain">
+            </div>
+            <h2 class="asset-title">Collezione Citizen Watch</h2>
+        </section>
+
+        <section>
+            <div class="video-container">
+                <video controls autoplay muted loop>
+                    <source src="gio/fuoco.mp4" type="video/mp4">
+                    Il tuo browser non supporta i video.
+                </video>
+            </div>
+            <h2 class="asset-title">L'Arte della Fusione (Token FEDE)</h2>
+        </section>
+
+        <section>
+            <div class="video-container">
+                <video controls muted loop>
+                    <source src="gio/prese.mp4" type="video/mp4">
+                    Il tuo browser non supporta i video.
+                </video>
+            </div>
+            <h2 class="asset-title">Presentazione Collezione COLLANA</h2>
+        </section>
+    </main>
+</div>
+
+<footer>
+    <div class="address-box">
+        <h4>Sede Principale (Digital)</h4>
+        <p>Stellar Mainnet Ecosystem<br>Issuer Account: GAEF56...BWGFS [cite: 2026-02-09]<br>Blockchain District, Cloud 9</p>
+    </div>
+    <div class="address-box">
+        <h4>Showroom Milano (Virtual)</h4>
+        <p>Via Montenapoleone, 202<br>20121 Milano, Italia<br>Email: info@stellarjewelry.it</p>
+    </div>
+    <div class="address-box">
+        <h4>Sede Dubai (Virtual)</h4>
+        <p>Business Bay, Binary Tower<br>Unit 101, Dubai, UAE<br>Supporto: +971 50 123 4567</p>
+    </div>
+</footer>
+
+</body>
+</html>
