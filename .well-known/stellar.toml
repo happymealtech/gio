@@ -1,0 +1,55 @@
+# File: stellar.toml
+# Generato per la Gioielleria Blockchain di [Tuo Nome/Negozio]
+# Partner Tecnico: Gemini AI
+
+NETWORK_PASSPHRASE="Public Global Stellar Network ; September 2015"
+
+[DOCUMENTATION]
+org_name="Gioielleria Digitale Stellar"
+org_url="https://tuo-dominio.github.io"
+org_description="Creazione e vendita di gioielli unici e asset digitali su rete Stellar."
+org_official_email="tua-email@esempio.com"
+
+[[CURRENCIES]]
+code="FEDE"
+issuer="GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS"
+display_decimals=2
+name="Fede Nuziale Digitale"
+desc="Token rappresentativo di una fede artigianale. Certificato di autenticità on-chain."
+image="https://tuo-dominio.github.io/images/fede.png"
+
+[[CURRENCIES]]
+code="PERLE"
+issuer="GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS"
+display_decimals=2
+name="Perle Certificate"
+desc="Asset legato a perle di alta qualità. Tracciabile al 100%."
+image="https://tuo-dominio.github.io/images/perle.png"
+
+[[CURRENCIES]]
+code="CITIZEN"
+issuer="GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS"
+display_decimals=0
+name="Citizen Watch Token"
+desc="Edizione limitata per orologi della serie Citizen su blockchain."
+image="https://tuo-dominio.github.io/images/citizen.png"
+
+[[CURRENCIES]]
+code="COLLANA"
+issuer="GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS"
+display_decimals=2
+name="Collana d'Autore"
+desc="Token per collane fatte a mano, scambiabile nel nostro store digitale."
+image="https://tuo-dominio.github.io/images/collana.png"
+
+[[CURRENCIES]]
+code="ANELLO"
+issuer="GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS"
+display_decimals=2
+name="Anello Solitario"
+desc="Rappresentazione digitale di un anello solitario di lusso."
+image="https://tuo-dominio.github.io/images/anello.png"
+
+# Sezione dedicata alla sicurezza (Clawback abilitato)
+[QUOTES]
+claback_enabled=true
