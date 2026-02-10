@@ -3,92 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stellar Luxury Jewelry | Official Store</title>
+    <title>Stellar Luxury | Experience</title>
     <style>
-        /* SFONDO BIANCO E STILE PULITO */
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background-color: #ffffff; color: #1a1a1a; }
-        header { background-color: #f8f8f8; padding: 30px; text-align: center; border-bottom: 3px solid #d4af37; }
-        h1 { margin: 0; letter-spacing: 2px; color: #1a1a1a; }
-        
-        .container { display: flex; flex-wrap: wrap; padding: 20px; max-width: 1200px; margin: 0 auto; }
-        
-        /* SINISTRA: Prezzi e Titolo */
-        .sidebar { flex: 1; min-width: 250px; padding: 20px; border-right: 1px solid #eee; }
-        .price-ticker { background: #fdfdfd; border: 1px solid #d4af37; padding: 15px; border-radius: 8px; }
-        .price-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #eee; font-weight: bold; }
-        .price-item span:last-child { color: #d4af37; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { height: 100%; font-family: 'Times New Roman', serif; background-color: #000; color: #fff; }
 
-        /* CENTRO: Media e Video */
-        .main-content { flex: 3; padding: 20px; text-align: center; }
-        .media-box { margin-bottom: 50px; background: #fff; padding: 10px; border: 1px solid #eee; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        video, img { width: 100%; max-width: 700px; height: auto; display: block; margin: 0 auto; border-radius: 2px; }
-        .asset-label { margin-top: 15px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; color: #555; }
+        /* VIDEO BACKGROUND FISSO */
+        #video-bg {
+            position: fixed;
+            right: 0; bottom: 0;
+            min-width: 100%; min-height: 100%;
+            z-index: -1;
+            filter: brightness(30%);
+            object-fit: cover;
+        }
 
-        /* FOOTER: Indirizzi */
-        footer { background: #f8f8f8; padding: 50px 20px; border-top: 1px solid #eee; display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; }
-        .address-box { margin: 15px; min-width: 250px; }
-        .address-box h4 { color: #d4af37; margin-bottom: 10px; text-transform: uppercase; }
-        .address-box p { font-size: 0.9em; color: #666; line-height: 1.6; margin: 0; }
+        /* HEADER ELEGANTE */
+        header { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        h1 { font-size: 3.5em; letter-spacing: 10px; text-transform: uppercase; font-weight: 300; margin-bottom: 10px; }
+        header p { font-style: italic; color: #d4af37; letter-spacing: 3px; }
+
+        /* SEZIONE CONTENUTO BIANCO PERLA */
+        .content-section { background: rgba(255, 255, 255, 0.98); color: #1a1a1a; padding: 80px 40px; position: relative; z-index: 1; }
+        .main-container { max-width: 1400px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; }
+
+        /* LISTINO PREZZI MINIMALIST */
+        .sidebar { flex: 1; min-width: 300px; padding: 30px; border: 1px solid #d4af37; height: fit-content; background: #fff; }
+        .sidebar h2 { font-size: 1.2em; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 25px; border-bottom: 1px solid #d4af37; padding-bottom: 10px; }
+        .price-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #f0f0f0; font-family: Arial, sans-serif; font-size: 0.85em; }
+        .price-row span:last-child { color: #d4af37; font-weight: bold; }
+
+        /* GRID DINAMICA (STILE FOTO GENERATA) */
+        .gallery-grid { flex: 3; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); grid-auto-rows: 200px; grid-gap: 20px; grid-auto-flow: dense; }
+        
+        .gallery-item { position: relative; overflow: hidden; border: 1px solid #eee; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .gallery-item:hover img { transform: scale(1.1); }
+
+        /* CLASSI PER DIMENSIONI VARIABILI */
+        .tall { grid-row: span 2; }
+        .wide { grid-column: span 2; }
+        .big { grid-column: span 2; grid-row: span 2; }
+
+        .label { position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; font-size: 0.7em; letter-spacing: 1px; text-transform: uppercase; }
+
+        /* FOOTER NERO */
+        footer { background: #000; color: #666; padding: 60px 20px; text-align: center; position: relative; z-index: 1; }
+        .footer-info { display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1200px; margin: 0 auto 30px; }
+        .footer-info h4 { color: #d4af37; margin-bottom: 10px; font-weight: 300; letter-spacing: 2px; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>💎 GIOIELLERIA BLOCKCHAIN STELLAR 💎</h1>
-    <p style="color: #888;">Eccellenza Digitale e Sicurezza on-chain</p>
-</header>
+    <video autoplay muted loop playsinline id="video-bg">
+        <source src="fuoco.mp4" type="video/mp4">
+    </video>
 
-<div class="container">
-    <aside class="sidebar">
-        <h2 style="font-size: 1.2em;">Listino Asset</h2>
-        <div class="price-ticker">
-            <div class="price-item"><span>FEDE</span> <span>1500 XLM</span></div>
-            <div class="price-item"><span>PERLE</span> <span>2800 XLM</span></div>
-            <div class="price-item"><span>CITIZEN</span> <span>3200 XLM</span></div>
-            <div class="price-item"><span>ANELLO</span> <span>4500 XLM</span></div>
-            <div class="price-item"><span>COLLANA</span> <span>5000 XLM</span></div>
+    <header>
+        <h1>Stellar Luxury</h1>
+        <p>Experience the New Digital Era</p>
+    </header>
+
+    <section class="content-section">
+        <div class="main-container">
+            
+            <aside class="sidebar">
+                <h2>Listino Asset</h2>
+                <div class="price-row"><span>FEDE NUZIALE</span> <span>1500 XLM</span></div>
+                <div class="price-row"><span>PERLE CERTIFICATE</span> <span>2800 XLM</span></div>
+                <div class="price-row"><span>CITIZEN WATCH</span> <span>3200 XLM</span></div>
+                <div class="price-row"><span>ANELLO SOLITARIO</span> <span>4500 XLM</span></div>
+                <div class="price-row"><span>COLLANA D'AUTORE</span> <span>5000 XLM</span></div>
+            </aside>
+
+            <div class="gallery-grid">
+                <div class="gallery-item big">
+                    <img src="citizen.jpg" alt="Citizen">
+                    <div class="label">Collezione Citizen</div>
+                </div>
+                <div class="gallery-item tall">
+                    <img src="anellooro.jpg" alt="Anello">
+                    <div class="label">Il Solitario</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="perle.jpg" alt="Perle">
+                    <div class="label">Purezza</div>
+                </div>
+                <div class="gallery-item wide">
+                    <img src="collana.jpg" alt="Collana">
+                    <div class="label">Design Collana</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fede.jpg" alt="Fede">
+                    <div class="label">Fede Nuziale</div>
+                </div>
+            </div>
+
         </div>
-        <p style="margin-top: 20px; font-size: 0.75em; color: #999;">
-            * Prezzi basati sul DEX di Stellar. <br>Fee di transazione: 1% [cite: 2026-02-04]
-        </p>
-    </aside>
+    </section>
 
-    <main class="main-content">
-        <section class="media-box">
-            <img src="citizen.jpg" alt="Orologio Citizen">
-            <div class="asset-label">Collezione Citizen Watch</div>
-        </section>
-
-        <section class="media-box">
-            <video autoplay muted loop playsinline controls>
-                <source src="fuoco.mp4" type="video/mp4">
-            </video>
-            <div class="asset-label">L'Arte della Fusione (Asset FEDE)</div>
-        </section>
-
-        <section class="media-box">
-            <video muted loop playsinline controls>
-                <source src="prese.mp4" type="video/mp4">
-            </video>
-            <div class="asset-label">Presentazione Collezione COLLANA</div>
-        </section>
-    </main>
-</div>
-
-<footer>
-    <div class="address-box">
-        <h4>Digital Headquarters</h4>
-        <p>Stellar Network Mainnet<br>Issuer: GAEF56...BWGFS [cite: 2026-02-09]<br>Global Blockchain District</p>
-    </div>
-    <div class="address-box">
-        <h4>Milano Boutique</h4>
-        <p>Via Montenapoleone, 202<br>20121 Milano, IT<br>Email: info@stellarjewelry.it</p>
-    </div>
-    <div class="address-box">
-        <h4>Dubai Office</h4>
-        <p>Business Bay, Binary Tower<br>Unit 101, Dubai, UAE<br>Support: +971 50 123 4567</p>
-    </div>
-</footer>
-
-</body>
-</html>
+    <footer>
+        <div class="footer-info">
+            <div>
+                <h4>Atelier</h4>
+                <p>Issuer: GAEF56...BWGFS</p>
+            </div>
+            <div>
+                <h4>Milano</h4>
+                <p>Via Montenapoleone, 202</p>
+            </div>
+            <div>
+                <h4>Dubai</h4>
+                <p>Binary Tower, Unit 101</p>
+            </div>
+        </div>
+        <p style="font-size: 0.7em; letter-spacing: 2px;">© 2026 STELLAR JEWELRY. DESIGNED BY GEMINI AI. [cite: 047503e3
