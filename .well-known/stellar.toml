@@ -1,55 +1,58 @@
 # File: stellar.toml
-# Generato per la Gioielleria Blockchain di [Tuo Nome/Negozio]
+# Progetto: Gioielleria Blockchain All'avanguardia
+# Issuer: GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS
 # Partner Tecnico: Gemini AI
 
 NETWORK_PASSPHRASE="Public Global Stellar Network ; September 2015"
 
 [DOCUMENTATION]
 org_name="Gioielleria Digitale Stellar"
-org_url="https://tuo-dominio.github.io"
-org_description="Creazione e vendita di gioielli unici e asset digitali su rete Stellar."
-org_official_email="tua-email@esempio.com"
+org_url="https://tuo-username.github.io/gio"
+org_description="Negozio digitale di alta gioielleria su Stellar. Asset reali tokenizzati con tracciabilità totale."
 
 [[CURRENCIES]]
 code="FEDE"
 issuer="GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS"
 display_decimals=2
 name="Fede Nuziale Digitale"
-desc="Token rappresentativo di una fede artigianale. Certificato di autenticità on-chain."
-image="https://tuo-dominio.github.io/images/fede.png"
+desc="Fede artigianale tokenizzata. Raffinatezza e sicurezza on-chain."
+image="https://tuo-username.github.io/gio/fede.jpg"
+# Video di presentazione per l'artigianato
+video="https://tuo-username.github.io/gio/fuoco.mp4"
 
 [[CURRENCIES]]
 code="PERLE"
 issuer="GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS"
 display_decimals=2
 name="Perle Certificate"
-desc="Asset legato a perle di alta qualità. Tracciabile al 100%."
-image="https://tuo-dominio.github.io/images/perle.png"
+desc="Selezione di perle naturali certificate su blockchain."
+image="https://tuo-username.github.io/gio/perle.jpg"
 
 [[CURRENCIES]]
 code="CITIZEN"
 issuer="GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS"
 display_decimals=0
 name="Citizen Watch Token"
-desc="Edizione limitata per orologi della serie Citizen su blockchain."
-image="https://tuo-dominio.github.io/images/citizen.png"
+desc="Orologeria di alta precisione in edizione limitata."
+image="https://tuo-username.github.io/gio/citizen.jpg"
 
 [[CURRENCIES]]
 code="COLLANA"
 issuer="GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS"
 display_decimals=2
 name="Collana d'Autore"
-desc="Token per collane fatte a mano, scambiabile nel nostro store digitale."
-image="https://tuo-dominio.github.io/images/collana.png"
+desc="Collana esclusiva con design d'avanguardia."
+image="https://tuo-username.github.io/gio/collana.jpg"
+# Video promozionale della collezione
+video="https://tuo-username.github.io/gio/prese.mp4"
 
 [[CURRENCIES]]
 code="ANELLO"
 issuer="GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS"
 display_decimals=2
-name="Anello Solitario"
-desc="Rappresentazione digitale di un anello solitario di lusso."
-image="https://tuo-dominio.github.io/images/anello.png"
+name="Anello Solitario Oro"
+desc="Anello solitario in oro, l'eccellenza del lusso digitale."
+image="https://tuo-username.github.io/gio/anellooro.jpg"
 
-# Sezione dedicata alla sicurezza (Clawback abilitato)
 [QUOTES]
 claback_enabled=true
