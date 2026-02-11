@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+Se cari<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -8,101 +7,94 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400&display=swap');
-        body { font-family: 'Montserrat', sans-serif; background-color: #ffffff; }
+        body { font-family: 'Montserrat', sans-serif; background-color: #fff; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        video, img { width: 100%; height: 350px; object-fit: cover; border-radius: 8px; }
-        .card { transition: transform 0.3s; }
-        .card:hover { transform: translateY(-50px); }
+        .asset-container img, .asset-container video { 
+            width: 100%; 
+            height: 400px; 
+            object-fit: cover; 
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body class="text-gray-900">
 
-    <header class="bg-black text-white p-8 shadow-2xl">
-        <div class="container mx-auto text-center">
-            <h1 class="text-3xl tracking-[0.4em] uppercase mb-2">Gioielleria Digitale Stellar</h1>
-            <p class="text-[10px] text-gray-500 font-mono italic">Partner Tecnico: Gemini AI</p>
-        </div>
+    <header class="bg-black text-white p-8 text-center">
+        <h1 class="text-2xl tracking-[0.4em] uppercase">Gioielleria Digitale Stellar</h1>
+        <p class="text-[10px] text-gray-500 mt-2 font-mono">ISSUER: GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS</p>
     </header>
 
-    <section class="container mx-auto py-12 px-4">
-        <div class="grid md:grid-cols-2 gap-8 items-center bg-gray-50 p-8 rounded-2xl border">
-            <div>
-                <video autoplay muted loop playsinline class="shadow-2xl">
+    <main class="container mx-auto py-12 px-4">
+        
+        <section class="mb-20">
+            <div class="asset-container">
+                <video autoplay muted loop playsinline>
                     <source src="fuoco.mp4" type="video/mp4">
-                    Il tuo browser non supporta il video.
                 </video>
             </div>
-            <div>
-                <span class="text-gold-600 text-xs font-bold tracking-widest uppercase">Featured Video</span>
-                <h2 class="text-4xl mt-2 mb-4 uppercase">L'Arte del Fuoco</h2>
-                <p class="text-gray-600 italic">Dalla fusione alla creazione: i nostri asset digitali rappresentano l'eccellenza dell'artigianato reale su blockchain.</p>
-                <p class="mt-6 text-[10px] bg-white p-2 inline-block border font-mono">ISSUER: GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS</p>
+            <div class="text-center mt-6">
+                <h2 class="text-3xl uppercase">L'Essenza dell'Artigianato</h2>
+                <p class="text-gray-500 italic">Asset reali, sicurezza Blockchain.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="container mx-auto py-20 px-4">
-        <h3 class="text-center text-2xl mb-16 uppercase tracking-widest">Collezione On-Chain</h3>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             
-            <div class="card text-center">
-                <img src="fede.jpg" alt="Fede Nuziale Digitale">
-                <h4 class="mt-4 font-bold uppercase tracking-tighter">Fede Nuziale Digitale</h4>
-                <p class="text-xs text-blue-500 font-mono">CODE: FEDE</p>
+            <div class="asset-container text-center">
+                <img src="fede.jpg" alt="Fede">
+                <h3 class="mt-4 font-bold uppercase">Fede Nuziale Digitale</h3>
+                <p class="text-xs text-blue-600 font-mono">ASSET: FEDE</p>
             </div>
 
-            <div class="card text-center">
+            <div class="asset-container text-center">
                 <video autoplay muted loop playsinline>
                     <source src="prese.mp4" type="video/mp4">
                 </video>
-                <h4 class="mt-4 font-bold uppercase tracking-tighter">Collezione d'Autore</h4>
-                <p class="text-xs text-blue-500 font-mono">VIDEO: PRESE.MP4</p>
+                <h3 class="mt-4 font-bold uppercase">Collana d'Autore (Preview)</h3>
+                <p class="text-xs text-blue-600 font-mono">VIDEO: PRESE.MP4</p>
             </div>
 
-            <div class="card text-center">
-                <img src="citizen.jpg" alt="Citizen Watch">
-                <h4 class="mt-4 font-bold uppercase tracking-tighter">Citizen Watch Token</h4>
-                <p class="text-xs text-blue-500 font-mono">CODE: CITIZEN</p>
+            <div class="asset-container text-center">
+                <img src="citizen.jpg" alt="Citizen">
+                <h3 class="mt-4 font-bold uppercase">Citizen Watch Token</h3>
+                <p class="text-xs text-blue-600 font-mono">ASSET: CITIZEN</p>
             </div>
 
-            <div class="card text-center">
-                <img src="anellooro.jpg" alt="Anello Solitario Oro">
-                <h4 class="mt-4 font-bold uppercase tracking-tighter">Anello Solitario Oro</h4>
-                <p class="text-xs text-blue-500 font-mono">CODE: ANELLO</p>
+            <div class="asset-container text-center">
+                <img src="anellooro.jpg" alt="Anello">
+                <h3 class="mt-4 font-bold uppercase">Anello Solitario Oro</h3>
+                <p class="text-xs text-blue-600 font-mono">ASSET: ANELLO</p>
             </div>
 
-            <div class="card text-center">
-                <img src="perle.jpg" alt="Perle Certificate">
-                <h4 class="mt-4 font-bold uppercase tracking-tighter">Perle Certificate</h4>
-                <p class="text-xs text-blue-500 font-mono">CODE: PERLE</p>
+            <div class="asset-container text-center">
+                <img src="perle.jpg" alt="Perle">
+                <h3 class="mt-4 font-bold uppercase">Perle Certificate</h3>
+                <p class="text-xs text-blue-600 font-mono">ASSET: PERLE</p>
             </div>
 
-            <div class="card text-center">
-                <img src="collana.jpg" alt="Collana Asset">
-                <h4 class="mt-4 font-bold uppercase tracking-tighter">Collana Digitale</h4>
-                <p class="text-xs text-blue-500 font-mono">CODE: COLLANA</p>
+            <div class="asset-container text-center">
+                <img src="collana.jpg" alt="Collana">
+                <h3 class="mt-4 font-bold uppercase">Collana Artigianale</h3>
+                <p class="text-xs text-blue-600 font-mono">ASSET: COLLANA</p>
             </div>
 
         </div>
-    </section>
+    </main>
 
-    <footer class="bg-black text-white py-12 text-center mt-20">
-        <div class="container mx-auto px-4">
-            <p class="text-[10px] tracking-[0.5em] text-gray-500 uppercase mb-4">Blockchain Stellar Network</p>
-            <div class="flex justify-center gap-8 text-[10px] uppercase tracking-widest">
-                <a href=".well-known/stellar.toml" class="text-yellow-500 hover:text-white">Stellar.toml</a>
-                <a href="https://github.com/happymealtech" class="text-gray-400 hover:text-white">GitHub: happymealtech</a>
-            </div>
-        </div>
+    <footer class="p-10 text-center border-t mt-10">
+        <a href=".well-known/stellar.toml" class="text-xs text-yellow-600 uppercase tracking-widest hover:underline">
+            Configurazione Stellar.toml
+        </a>
     </footer>
 
 </body>
 </html>
-     
-    
 
-   
+    
+      
+
+    
 
 
   
