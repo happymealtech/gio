@@ -3,108 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stellar Luxury Banking - Gioielleria</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Montserrat', sans-serif; margin: 0; background: #fff; color: #1a1a1a; }
-        
-        /* Menu di Navigazione */
-        nav { padding: 20px; text-align: center; border-bottom: 1px solid #f2f2f2; }
-        nav a { margin: 0 15px; text-decoration: none; color: #888; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; }
-        nav a:hover { color: #000; }
-
-        header { padding: 30px 20px; text-align: center; }
-        h1 { font-family: 'Playfair Display', serif; font-size: 1.2rem; letter-spacing: 6px; text-transform: uppercase; margin: 0; }
-
-        /* Barra di Ricerca */
-        .search-container { text-align: center; margin: 30px 0; }
-        #searchInput {
-            padding: 12px 20px;
-            width: 300px;
-            border: 1px solid #eee;
-            border-radius: 0;
-            font-family: 'Montserrat', sans-serif;
-            outline: none;
-            transition: 0.3s;
-        }
-        #searchInput:focus { border-color: #bfa37e; box-shadow: 0 0 10px rgba(191,163,126,0.1); }
-
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; padding: 20px; }
-        .card { text-align: center; transition: 0.3s; }
-        .card img { width: 100%; height: 300px; object-fit: cover; background: #fcfcfc; }
-        .card h3 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin: 15px 0 5px 0; }
-        .dex-price { font-size: 0.85rem; color: #bfa37e; font-weight: bold; }
-
-        footer { background: #1a1a1a; color: white; text-align: center; padding: 40px; margin-top: 60px; font-size: 0.7rem; letter-spacing: 1px; }
-    </style>
+    <title>Gioielleria Esclusiva - Blockchain Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="collezioni.html">Nuove Collezioni</a>
-        <a href="#">Banca & DEX</a>
-    </nav>
-
     <header>
-        <h1>Gioielleria Esclusiva</h1>
+        <div class="top-bar">
+            <div class="logo">GIOIELLERIA ESCLUSIVA</div>
+            <div class="search-container">
+                <input type="text" placeholder="Cerca gioielli o Asset ID...">
+                <button type="submit">🔍</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#storia">Chi Siamo</a></li>
+                    <li><a href="#gallery">Collezioni</a></li>
+                    <li><a href="#">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="search-container">
-        <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Cerca il tuo prodotto...">
-    </div>
+    <section id="storia" class="about-section">
+        <div class="container">
+            <h1>La Nostra Eccellenza</h1>
+            <p class="subtitle">Tradizione orafa e innovazione su Blockchain Stellar</p>
+            
+            <div class="description-grid">
+                <div class="desc-item">
+                    <h3>Chi Siamo</h3>
+                    <p>Siamo un punto di riferimento nell'alta gioielleria, dove l'arte della creazione incontra la sicurezza della tecnologia decentralizzata.</p>
+                </div>
+                <div class="desc-item">
+                    <h3>Esperienza Decennale</h3>
+                    <p>Operiamo nel settore da oltre 30 anni, garantendo ai nostri clienti pezzi unici, certificati e di inestimabile valore artigianale.</p>
+                </div>
+                <div class="desc-item">
+                    <h3>Specializzazione</h3>
+                    <p>Siamo specializzati in diamanti rari, orologi di lusso e nella tokenizzazione di asset preziosi tramite il nostro Issuer Stellar dedicato.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="product-grid" id="productGrid">
-        <div class="card">
-            <img src="citizen.jpg" alt="Citizen">
-            <h3>Citizen Exclusive</h3>
-            <div class="dex-price">9,000 EURC</div>
+    <section class="featured">
+        <div class="product-highlight">
+            <img src="orologio.jpg" alt="Orologio di Lusso">
+            <div class="product-info">
+                <h2>Featured Watch: Orologio.jtg</h2>
+                <p>Esclusivo orologio automatico con cassa in acciaio e diamanti di precisione. Movimento svizzero di alta ingegneria. Un pezzo di design unico disponibile anche come digital asset.</p>
+                <button class="btn-buy">Vedi Dettagli Token</button>
+            </div>
         </div>
-        <div class="card">
-            <img src="anellooro.jpg" alt="Anello">
-            <h3>Anello Oro 18k</h3>
-            <div class="dex-price">199 EURC</div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2>Le Nostre Creazioni</h2>
+        <div class="gallery-grid">
+            <div class="card">
+                <img src="anello.jpg" alt="Anello">
+                <p>Anello con Diamante</p>
+            </div>
+            <div class="card">
+                <img src="collana.jpg" alt="Collana">
+                <p>Collana Cuore Large</p>
+            </div>
+            <div class="card">
+                <img src="bracciale.jpg" alt="Bracciale">
+                <p>Bracciale Tennis Small</p>
+            </div>
         </div>
-        <div class="card">
-            <img src="collana.jpg" alt="Collana">
-            <h3>Collana Diamond</h3>
-            <div class="dex-price">199 EURC</div>
-        </div>
-        <div class="card">
-            <img src="perle.jpg" alt="Perle">
-            <h3>Perle Naturali</h3>
-            <div class="dex-price">999 EURC</div>
-        </div>
-        <div class="card">
-            <img src="fede.jpg" alt="Fede">
-            <h3>Fede Nuziale</h3>
-            <div class="dex-price">900 EURC</div>
-        </div>
-    </div>
+    </section>
 
     <footer>
-        <p>STELLAR BANKING INTERFACE | ISSUER: GD22...SQK</p>
+        <p>&copy; 2026 Gioielleria Esclusiva | Issuer: GD22GBK...XSQK</p>
     </footer>
 
-    <script>
-        function searchFunction() {
-            let input = document.getElementById('searchInput').value.toUpperCase();
-            let grid = document.getElementById('productGrid');
-            let cards = grid.getElementsByClassName('card');
-
-            for (let i = 0; i < cards.length; i++) {
-                let title = cards[i].getElementsByTagName('h3')[0];
-                if (title.innerHTML.toUpperCase().indexOf(input) > -1) {
-                    cards[i].style.display = "";
-                } else {
-                    cards[i].style.display = "none";
-                }
-            }
-        }
-    </script>
 </body>
 </html>
-     
-
+  
+        
+  
 
      
