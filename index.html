@@ -3,115 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vetrina Gioielleria Stellar</title>
+    <title>Gioielleria Digitale Stellar - Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: 'Helvetica', Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #333; }
-        
-        /* Header Scuro con Ricerca - Esattamente come la foto */
-        .top-header { background-color: #1a1a1a; color: white; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; }
-        .brand-section { display: flex; align-items: center; gap: 10px; }
-        .brand-logo { width: 32px; height: 32px; background: #fff; display: flex; align-items: center; justify-content: center; border-radius: 4px; }
-        .search-bar { flex-grow: 1; margin: 0 30px; position: relative; }
-        .search-bar input { width: 100%; padding: 8px 15px; border-radius: 20px; border: none; background: #333; color: white; outline: none; }
-        
-        /* Navigazione */
-        .nav-links { display: flex; justify-content: center; border-bottom: 1px solid #eee; background: #fff; }
-        .nav-links a { padding: 15px 25px; text-decoration: none; color: #666; font-weight: bold; font-size: 14px; }
-        .nav-links a.active { color: #000; border-bottom: 2px solid #a67c52; }
-
-        .main-container { max-width: 900px; margin: 0 auto; padding: 20px; }
-
-        /* Sezione Descrizione Richiesta */
-        .about-us { margin: 30px 0; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0; }
-        .about-us h2 { font-size: 1.2rem; color: #000; margin-bottom: 10px; }
-        .about-us p { line-height: 1.6; color: #555; font-size: 0.95rem; }
-
-        /* Featured Watch - Dati dai vecchi index */
-        .featured-item { display: flex; gap: 25px; align-items: center; background: #fafafa; padding: 20px; border-radius: 5px; margin-bottom: 40px; }
-        .featured-item img { width: 180px; height: auto; }
-        .featured-text h3 { margin: 0 0 10px 0; font-size: 1.3rem; }
-        .featured-text p { font-size: 0.9rem; color: #777; margin-bottom: 15px; }
-        .details-btn { background: #c5a059; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; }
-
-        /* Gallery - Dati dai Token Blockchain */
-        .gallery-label { font-size: 0.8rem; color: #999; margin-bottom: 15px; text-transform: lowercase; }
-        .grid-assets { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
-        .asset-card { text-align: center; }
-        .asset-card img { width: 100%; height: 130px; object-fit: cover; border: 1px solid #eee; }
-        .asset-card p { font-size: 0.75rem; margin-top: 8px; font-weight: 500; }
-        
-        /* Caso specifico collana sfondo nero come foto */
-        .dark-bg { background: #000 !important; display: flex; align-items: center; justify-content: center; }
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+        body { font-family: 'Montserrat', sans-serif; background-color: #fcfcfc; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .token-card { transition: all 0.3s ease; border: 1px solid #eee; }
+        .token-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); border-color: #d4af37; }
+        .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #f2d472 100%); }
     </style>
 </head>
-<body>
+<body class="text-gray-900">
 
-    <header class="top-header">
-        <div class="brand-section">
-            <div class="brand-logo"><img src="favicon.ico" style="width:20px;"></div>
-            <span style="letter-spacing: 1px; font-size: 14px; font-weight: 600;">Gioielleria Esclusiva</span>
+    <header class="bg-black text-white p-6 shadow-xl">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl tracking-widest uppercase">Gioielleria Digitale Stellar</h1>
+                <p class="text-[10px] text-gray-400 font-mono">Partner Tecnico: Gemini AI</p>
+            </div>
+            <nav class="space-x-8 text-sm uppercase tracking-widest hidden md:flex">
+                <a href="#" class="hover:text-gold-400">Collezioni</a>
+                <a href=".well-known/stellar.toml" class="hover:text-gold-400 text-yellow-500">Stellar.toml</a>
+                <a href="https://github.com" class="hover:text-gold-400">GitHub</a>
+            </nav>
         </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Cerca i tuoi asset su Stellar...">
-        </div>
-        <div style="font-size: 20px;">☰</div>
     </header>
 
-    <nav class="nav-links">
-        <a href="#" class="active">Chi Siamo</a>
-        <a href="#">Collezione</a>
-        <a href="#">Contatti</a>
-    </nav>
+    <section class="py-16 text-center border-b bg-white">
+        <div class="max-w-2xl mx-auto px-4">
+            <h2 class="text-4xl mb-4">Negozio digitale di alta gioielleria su Stellar</h2>
+            <div class="h-1 w-20 gold-gradient mx-auto mb-6"></div>
+            <p class="text-gray-600 italic">Raffinatezza e sicurezza on-chain per i tuoi asset preziosi.</p>
+            <p class="mt-4 text-[10px] bg-gray-100 inline-block p-2 rounded font-mono text-gray-500">
+                ISSUER: GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS
+            </p>
+        </div>
+    </section>
 
-    <div class="main-container">
-        
-        <section class="about-us">
-            <h2>La Nostra storia</h2>
-            <p>Siamo una <strong>gioielleria specializzata</strong> con oltre 30 anni di esperienza nel settore dell'alta oreficeria. La nostra passione per l'eccellenza ci ha portato oggi a integrare la tradizione con l'innovazione della <strong>Blockchain Stellar</strong>.</p>
-            <p>Operiamo con serietà per garantire che ogni gioiello sia non solo un oggetto prezioso, ma anche un asset digitale sicuro e certificato dal nostro Issuer ufficiale.</p>
-        </section>
-
-        <div class="gallery-label">featured watch</div>
-        <div class="featured-item">
-            <img src="orologio.jtg" onerror="this.src='https://raw.githubusercontent.com/tuo-username/tuo-repo/main/orologio.jpg'" alt="Orologio">
-            <div class="featured-text">
-                <h3>orologio.jtg</h3>
-                <p>Esclusivo orologio automatico con cassa in acciaio e diamanti di precisione. Un movimento svizzero di alta ingegneria. Un design unico registrato su blockchain.</p>
-                <button class="details-btn">Vedi Dettagli</button>
+    <section class="container mx-auto py-20 px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12 bg-white p-8 rounded-lg shadow-sm border">
+            <div class="w-full md:w-1/2">
+                <img src="https://tuo-username.github.io/gio/citizen.jpg" alt="Citizen Watch" class="w-full h-auto rounded shadow-2xl">
+            </div>
+            <div class="w-full md:w-1/2">
+                <span class="text-yellow-600 font-semibold tracking-widest text-sm uppercase">Edizione Limitata</span>
+                <h3 class="text-5xl my-4">Citizen Watch Token</h3>
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                    Orologeria di alta precisione in edizione limitata. Un pezzo unico tokenizzato sulla rete Stellar per garantire autenticità e valore nel tempo.
+                </p>
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl font-light italic">Asset Code: CITIZEN</span>
+                    <button class="bg-black text-white px-8 py-3 uppercase text-xs tracking-widest hover:bg-gold-600 transition">Acquista Asset</button>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="gallery-label">gallery itml</div>
-        <div class="grid-assets">
-            <div class="asset-card">
-                <img src="anello.jpg">
-                <p>Anello con Diamante</p>
-            </div>
-            <div class="asset-card">
-                <div class="dark-bg" style="height:130px;"><img src="collana.jpg" style="height:100px; width:auto;"></div>
-                <p>Collana Cuore Large</p>
-            </div>
-            <div class="asset-card">
-                <img src="bracciale1.jpg">
-                <p>Bracciale Tennis Small</p>
-            </div>
-            <div class="asset-card">
-                <img src="bracciale2.jpg">
-                <p>Bracciale Ennis Small</p>
+    <section class="bg-gray-50 py-20 px-4">
+        <div class="container mx-auto">
+            <h3 class="text-3xl text-center mb-16 uppercase tracking-widest">Le Nostre Fedi e Collane</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <div class="token-card bg-white p-6 rounded-sm">
+                    <img src="https://tuo-username.github.io/gio/fede.jpg" alt="Fede" class="w-full h-64 object-cover mb-6">
+                    <h4 class="text-xl font-bold mb-2">Fede Nuziale Digitale</h4>
+                    <p class="text-sm text-gray-500 mb-4 h-12">Fede artigianale tokenizzata. Raffinatezza e sicurezza on-chain.</p>
+                    <div class="border-t pt-4 flex justify-between items-center">
+                        <span class="font-mono text-xs text-blue-600 underline">Code: FEDE</span>
+                        <span class="text-xs text-gray-400">Decimals: 2</span>
+                    </div>
+                </div>
+
+                <div class="token-card bg-white p-6 rounded-sm">
+                    <img src="https://tuo-username.github.io/gio/collana.jpg" alt="Collana" class="w-full h-64 object-cover mb-6">
+                    <h4 class="text-xl font-bold mb-2">Collana d'Autore</h4>
+                    <p class="text-sm text-gray-500 mb-4 h-12">Collana esclusiva con design d'avanguardia.</p>
+                    <div class="border-t pt-4 flex justify-between items-center">
+                        <span class="font-mono text-xs text-blue-600 underline">Code: COLLANA</span>
+                        <span class="text-xs text-gray-400">Decimals: 2</span>
+                    </div>
+                </div>
+
+                <div class="token-card bg-white p-6 rounded-sm">
+                    <img src="https://tuo-username.github.io/gio/anellooro.jpg" alt="Anello" class="w-full h-64 object-cover mb-6">
+                    <h4 class="text-xl font-bold mb-2">Anello Solitario Oro</h4>
+                    <p class="text-sm text-gray-500 mb-4 h-12">Anello solitario in oro, l'eccellenza del lusso digitale.</p>
+                    <div class="border-t pt-4 flex justify-between items-center">
+                        <span class="font-mono text-xs text-blue-600 underline">Code: ANELLO</span>
+                        <span class="text-xs text-gray-400">Decimals: 2</span>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </section>
 
-    </div>
-
-    <footer style="margin-top: 60px; padding: 20px; border-top: 1px solid #eee; text-align: center; color: #bbb; font-size: 10px;">
-        ISSUER: GD22GBKOUYWC3C2QDZPMT27GBD2L6STAPXN2QEZB3HX4GNISW3P7XSQK
-    </footer>
-
-</body>
+    <footer class="bg-black text-white py-12 px-4">
+        <div class="container mx-auto text-center">
+            <p class="text-sm tracking-widest mb-4">ORG: GIOIELLERIA DIGITALE STELLAR</p>
+            <p class="text-[10px] text-gray-500 mb-8">ISSUER: GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS</p>
+            <div class="flex justify-center space-x-6 text-xs text-gray-400 uppercase">
+                <a href="#">Privacy
   
-    
-    
-
     
   
 
