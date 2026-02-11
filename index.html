@@ -3,110 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gioielleria Esclusiva - Hub Bancario</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Stellar Luxury Banking - Gioielleria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff; /* Sfondo bianco come richiesto */
-            color: #333;
+            background-color: #ffffff;
+            color: #1a1a1a;
         }
 
         header {
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #f2f2f2;
         }
 
         h1 {
-            font-size: 1.5rem; /* Nome più piccolo */
-            letter-spacing: 4px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            letter-spacing: 6px;
             text-transform: uppercase;
-            font-weight: 300;
+            font-weight: 400;
+            margin: 0;
         }
 
-        /* Sezione Brand Lusso */
         .brands-bar {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 30px;
-            padding: 15px;
-            background: #f9f9f9;
-            opacity: 0.7;
-        }
-
-        .brand-logo {
-            height: 25px; /* Loghi piccoli e discreti */
-            filter: grayscale(100%);
-        }
-
-        /* Vetrina Orologio Principale */
-        .featured-product {
-            max-width: 1000px;
-            margin: 40px auto;
+            gap: 40px;
             padding: 20px;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            color: #888;
+            border-bottom: 1px solid #f9f9f9;
+        }
+
+        /* Sezione Prodotto Principale: CITIZEN */
+        .main-showcase {
+            max-width: 1100px;
+            margin: 60px auto;
             display: flex;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 40px;
+            gap: 50px;
+            padding: 0 20px;
         }
 
-        .featured-image {
-            flex: 1;
-            min-width: 300px;
+        .main-showcase img {
+            width: 50%;
+            height: auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+        }
+
+        .main-details {
+            width: 50%;
+        }
+
+        .main-details h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .price-tag {
+            font-size: 1.5rem;
+            color: #bfa37e; /* Oro opaco */
+            margin: 15px 0;
+            font-weight: 400;
+        }
+
+        /* Galleria Prodotti */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .card {
             text-align: center;
         }
 
-        .featured-image img {
-            max-width: 100%;
-            height: auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        .featured-info {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .featured-info h2 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        /* Galleria Immagini */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .gallery-item {
-            overflow: hidden;
-            background: #f4f4f4;
-        }
-
-        .gallery-item img {
+        .card img {
             width: 100%;
-            height: 100%;
+            height: 300px;
             object-fit: cover;
-            transition: transform 0.5s;
+            margin-bottom: 15px;
+            background: #fcfcfc;
         }
 
-        /* Classi per foto grandi e piccole */
-        .large { grid-row: span 2; grid-column: span 2; }
-        .small { grid-row: span 1; grid-column: span 1; }
+        .card h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 10px 0 5px 0;
+        }
+
+        .card .dex-price {
+            font-size: 0.85rem;
+            color: #666;
+        }
 
         footer {
+            background: #1a1a1a;
+            color: white;
             text-align: center;
-            padding: 40px;
-            font-size: 0.8rem;
-            color: #999;
+            padding: 60px 20px;
+            margin-top: 100px;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -120,45 +128,54 @@
         <span>ROLEX</span>
         <span>CARTIER</span>
         <span>PATEK PHILIPPE</span>
-        <span>BULGARI</span>
+        <span>VANCLEEF</span>
     </div>
 
-    <section class="featured-product">
-        <div class="featured-image">
-            <img src="citizen.jpg" alt="Orologio Citizen">
-        </div>
-        <div class="featured-info">
-            <h2>Citizen Elegance 2026</h2>
-            <p>Un capolavoro di ingegneria e stile. Cassa in acciaio spazzolato, movimento di precisione e quadrante minimalista. Il simbolo del tempo gestito con rigore bancario.</p>
-            <p><strong>Asset Blockchain:</strong> CTZ-TOKEN</p>
+    <section class="main-showcase">
+        <img src="citizen.jpg" alt="Citizen Elegance">
+        <div class="main-details">
+            <h2>Citizen Exclusive</h2>
+            <p>Ingegneria di precisione per il moderno investitore. Un asset temporale garantito sulla rete Stellar.</p>
+            <div class="price-tag">9,000 EURC</div>
+            <p style="font-size: 0.8rem; color: #999;">ID ASSET: CITIZEN</p>
         </div>
     </section>
 
-    <div class="gallery">
-        <div class="gallery-item large">
+    <div class="product-grid">
+        
+        <div class="card">
             <img src="anellooro.jpg" alt="Anello Oro">
+            <h3>Anello Oro 18k</h3>
+            <div class="dex-price">Prezzo DEX: 199 EURC</div>
         </div>
-        <div class="gallery-item small">
+
+        <div class="card">
             <img src="collana.jpg" alt="Collana">
+            <h3>Collana Diamond Light</h3>
+            <div class="dex-price">Prezzo DEX: 199 EURC</div>
         </div>
-        <div class="gallery-item small">
+
+        <div class="card">
             <img src="perle.jpg" alt="Perle">
+            <h3>Perle Naturali</h3>
+            <div class="dex-price">Prezzo DEX: 999 EURC</div>
         </div>
-        <div class="gallery-item small">
+
+        <div class="card">
             <img src="fede.jpg" alt="Fede">
+            <h3>Fede Nuziale Classica</h3>
+            <div class="dex-price">Prezzo DEX: 900 EURC</div>
         </div>
+
     </div>
 
     <footer>
-        <p>&copy; 2026 Stellar Hair & Jewelry Bank. Issuer: GD22...SQK</p>
+        <p>STELLAR BANKING INTERFACE | ISSUER: GD22...SQK</p>
+        <p style="margin-top: 10px; opacity: 0.5;">Tutti i prezzi sono sincronizzati con lo Stellar Decentralized Exchange.</p>
     </footer>
 
 </body>
 </html>
-
-
- 
-
-
-   
+     
+           
       
