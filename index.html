@@ -3,93 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gioielleria Esclusiva</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body style="font-family: 'Inter', sans-serif; margin: 0; padding: 0; color: #333;">
-
-    <header style="background-color: #1a1a1a; color: white; padding: 15px 20px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto;">
-            <div style="display: flex; align-items: center;">
-                <img src="logo_watch.png" alt="Logo" style="height: 30px; margin-right: 10px; filter: invert(1);">
-                <span style="font-weight: 600; letter-spacing: 1px;">Gioielleria Esclusiva</span>
-            </div>
-            
-            <div style="flex-grow: 1; margin: 0 40px;">
-                <input type="text" placeholder="Cerca..." style="width: 100%; padding: 8px 15px; border-radius: 20px; border: none; background: #333; color: white;">
-            </div>
-
-            <div style="display: flex; gap: 20px; font-size: 20px;">
-                <span>☰</span>
-            </div>
-        </div>
-    </header>
-
-    <nav style="border-bottom: 1px solid #eee; padding: 10px 0;">
-        <ul style="display: flex; justify-content: center; list-style: none; gap: 50px; font-weight: 600; color: #555;">
-            <li style="border-bottom: 2px solid #8b5e3c; padding-bottom: 5px;">Chi Siamo</li>
-            <li>Collezione</li>
-            <li>Contatti</li>
-        </ul>
-    </nav>
-
-    <main style="max-width: 900px; margin: 0 auto; padding: 40px 20px;">
+    <title>Gioielleria Esclusiva - Vetrina Stellar</title>
+    <style>
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; color: #333; background-color: #fff; }
         
-        <section style="margin-bottom: 50px;">
-            <h2 style="font-size: 1.2rem; color: #000; margin-bottom: 15px;">La Nostra Storia</h2>
-            <p style="line-height: 1.6; color: #666;">
-                Siamo una <strong>gioielleria specializzata</strong> con oltre 30 anni di esperienza nel settore dell'alta oreficeria. La nostra missione è unire la tradizione artigianale alla sicurezza della blockchain, garantendo valore e autenticità eterna per ogni pezzo.
-            </p>
-            <p style="line-height: 1.6; color: #666;">
-                Ogni nostro gioiello è un'opera d'arte unica, ora disponibile anche come digital asset sulla rete Stellar, permettendoti di possedere bellezza e innovazione in un unico token.
+        /* Header Scuro come da foto */
+        .black-header { background-color: #1a1a1a; color: white; padding: 15px 25px; display: flex; align-items: center; justify-content: space-between; }
+        .logo-area { display: flex; align-items: center; gap: 10px; }
+        .logo-icon { width: 30px; height: 30px; background: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: black; font-weight: bold; }
+        .search-bar { flex-grow: 1; margin: 0 30px; position: relative; }
+        .search-bar input { width: 100%; padding: 8px 15px; border-radius: 20px; border: none; background: #333; color: white; }
+        
+        /* Menu Navigazione */
+        .nav-tabs { display: flex; justify-content: center; border-bottom: 1px solid #ddd; padding: 10px 0; }
+        .nav-tabs div { margin: 0 20px; font-weight: 600; color: #666; cursor: pointer; padding-bottom: 5px; }
+        .active-tab { border-bottom: 2px solid #a67c52; color: #000 !important; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+
+        /* Sezione Descrizione */
+        .story-section { margin: 30px 0; }
+        .story-section h2 { font-size: 1.1rem; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .story-section p { font-size: 0.95rem; line-height: 1.5; color: #444; }
+
+        /* Featured Watch */
+        .featured-watch { display: flex; gap: 20px; align-items: center; background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+        .featured-watch img { width: 180px; border-radius: 4px; }
+        .watch-details h3 { margin: 0; font-size: 1.2rem; }
+        .watch-details p { font-size: 0.85rem; color: #666; margin: 10px 0; }
+        .btn-details { background: #c5a059; color: white; border: none; padding: 8px 20px; border-radius: 15px; cursor: pointer; font-size: 0.8rem; }
+
+        /* Gallery Grid */
+        .gallery-title { font-size: 0.9rem; color: #888; margin-bottom: 15px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+        .gallery-item { text-align: center; }
+        .gallery-item img { width: 100%; height: 120px; object-fit: cover; border: 1px solid #eee; }
+        .gallery-item.dark img { background: black; }
+        .gallery-item p { font-size: 0.75rem; margin-top: 5px; color: #555; }
+    </style>
+</head>
+<body>
+
+    <div class="black-header">
+        <div class="logo-area">
+            <div class="logo-icon">⌚</div>
+            <span>Gioielleria Esclusiva</span>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Cerca...">
+        </div>
+        <div>☰</div>
+    </div>
+
+    <div class="nav-tabs">
+        <div class="active-tab">Chi Siamo</div>
+        <div>Collezione</div>
+        <div>Contatti</div>
+    </div>
+
+    <div class="container">
+        
+        <section class="story-section">
+            <h2>La Nostra storia</h2>
+            <p>
+                Siamo una <strong>gioielleria specializzata</strong> con oltre 30 anni di esperienza nel settore dell'alta gioielleria. 
+                Offriamo autentiche creazioni dell'arte orafa. La nostra missione è unita alla fiducia dei nostri clienti, 
+                garantendo valore e trasparenza attraverso la tecnologia blockchain.
             </p>
         </section>
 
-        <section style="display: flex; gap: 30px; align-items: center; margin-bottom: 60px; border-top: 1px solid #eee; padding-top: 40px;">
-            <div style="flex: 1; background: #f9f9f9; padding: 20px; text-align: center;">
-                <img src="orologio.jpg" alt="Featured watch" style="max-width: 100%; height: auto;">
-            </div>
-            <div style="flex: 1;">
-                <h3 style="margin-top: 0;">orologio.jtg</h3>
-                <p style="font-size: 0.9rem; color: #777; line-height: 1.4;">
-                    Esclusivo orologio automatico con cassa in acciaio e diamanti di precisione. Un movimento svizzero di alta ingegneria. Un design unico.
-                </p>
-                <button style="background: #c5a059; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer;">Vedi Dettagli</button>
-            </div>
-        </section>
-
-        <h3 style="font-size: 1rem; color: #888; margin-bottom: 20px;">gallery html</h3>
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
-            <div style="text-align: center;">
-                <img src="anello.jpg" style="width: 100%; height: 120px; object-fit: cover; background: #eee;">
-                <p style="font-size: 0.8rem; margin-top: 8px;">Anello con Diamante</p>
-            </div>
-            <div style="text-align: center;">
-                <div style="background: #000; height: 120px; display: flex; align-items: center; justify-content: center;">
-                    <img src="collana_verde.jpg" style="max-height: 100px;">
-                </div>
-                <p style="font-size: 0.8rem; margin-top: 8px;">Collana Cuore Large</p>
-            </div>
-            <div style="text-align: center;">
-                <img src="bracciale1.jpg" style="width: 100%; height: 120px; object-fit: cover; background: #eee;">
-                <p style="font-size: 0.8rem; margin-top: 8px;">Bracciale Tennis Small</p>
-            </div>
-            <div style="text-align: center;">
-                <img src="bracciale2.jpg" style="width: 100%; height: 120px; object-fit: cover; background: #eee;">
-                <p style="font-size: 0.8rem; margin-top: 8px;">Bracciale Ennis Small</p>
+        <p class="gallery-title">Featured watch</p>
+        <div class="featured-watch">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400" alt="Orologio">
+            <div class="watch-details">
+                <h3>orologio.jtg</h3>
+                <p>Esclusivo orologio automatico con cassa in acciaio e diamanti di precisione. Un movimento svizzero di alta qualità. Un design unico.</p>
+                <button class="btn-details">Vedi Dettagli</button>
             </div>
         </div>
 
-    </main>
+        <p class="gallery-title">gallery html</p>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=200">
+                <p>Anello con Diamante</p>
+            </div>
+            <div class="gallery-item dark">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=200">
+                <p>Collana Cuore Large</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=200">
+                <p>Bracciale Tennis Small</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=200">
+                <p>Bracciale Ennis Small</p>
+            </div>
+        </div>
 
-    <footer style="text-align: center; padding: 40px; color: #bbb; font-size: 0.8rem;">
+    </div>
+
+    <footer style="margin-top: 50px; border-top: 1px solid #eee; padding: 20px; text-align: center; font-size: 0.7rem; color: #aaa;">
         Issuer: GD22GBKOUYWC3C2QDZPMT27GBD2L6STAPXN2QEZB3HX4GNISW3P7XSQK
     </footer>
 
 </body>
 </html>
-      
+       
+
+  
+
+   
 
 
   
