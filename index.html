@@ -3,30 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gioielleria Esclusiva - Home</title>
+    <title>Gioielleria Esclusiva - Stellar Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #ffffff; }
-        .brand-logo { filter: grayscale(100%); width: 40px; height: auto; opacity: 0.7; }
-        .gallery-img { width: 100%; height: 150px; object-fit: cover; background: #f9f9f9; }
+        body { font-family: 'Arial', sans-serif; background-color: #ffffff; }
+        .brand-logo { filter: grayscale(100%); width: 40px; height: auto; opacity: 0.6; }
+        video, img { width: 100%; object-fit: cover; border-radius: 2px; }
+        .gallery-item { text-align: center; font-size: 10px; color: #666; }
     </style>
 </head>
 <body class="text-gray-900">
 
-    <header class="bg-[#1a1a1a] text-white p-3 flex justify-between items-center">
+    <header class="bg-[#1a1a1a] text-white p-4 flex justify-between items-center shadow-md">
         <div class="flex items-center space-x-3">
-            <img src="citizen.jpg" class="w-8 h-8 bg-white p-1" alt="logo">
-            <div class="leading-tight">
-                <p class="text-[10px] text-gray-400">index.css</p>
-                <h1 class="text-lg font-normal tracking-tight">Gioielleria Esclusiva</h1>
+            <img src="citizen.jpg" class="w-8 h-8 rounded-full border border-gray-600" alt="logo">
+            <div>
+                <p class="text-[9px] text-gray-500 font-mono">index.css</p>
+                <h1 class="text-xl font-light tracking-widest uppercase">Gioielleria Esclusiva</h1>
             </div>
         </div>
-        <div class="flex items-center space-x-4">
-            <input type="text" placeholder="Cerca..." class="bg-transparent border-b border-gray-600 text-xs px-2 py-1 outline-none focus:border-white">
-            <div class="text-[10px] text-right">
+        
+        <div class="flex items-center space-x-6">
+            <div class="relative hidden md:block">
+                <input type="text" placeholder="Cerca gioiello..." class="bg-[#2a2a2a] text-white text-xs rounded py-1 px-3 border border-gray-700 focus:outline-none focus:border-gray-500">
+            </div>
+            <div class="text-[10px] tracking-tighter text-right leading-none">
                 <p>DIORITREIA</p>
             </div>
-            <div class="space-y-1 cursor-pointer">
+            <div class="flex flex-col space-y-1 cursor-pointer">
                 <div class="w-6 h-0.5 bg-white"></div>
                 <div class="w-6 h-0.5 bg-white"></div>
                 <div class="w-6 h-0.5 bg-white"></div>
@@ -34,57 +38,88 @@
         </div>
     </header>
 
-    <section class="p-6 border-b border-gray-100">
+    <section class="max-w-6xl mx-auto p-8 border-b border-gray-100">
         <div class="flex items-center space-x-4 mb-4">
-            <div class="w-12 h-12 bg-black flex items-center justify-center text-[8px] text-center text-white">GIOIELLERIA<br>ESCLUSIVA</div>
-            <h2 class="text-2xl font-normal">hi Gioielleria Esclusiva</h2>
+            <div class="w-12 h-12 bg-black flex items-center justify-center text-[7px] text-center text-white p-1">GIOIELLERIA<br>ESCLUSIVA</div>
+            <h2 class="text-3xl font-light">hi Gioielleria Esclusiva</h2>
         </div>
-        <p class="text-[11px] text-blue-500 font-mono mb-6">html &lt;cpplerfito ai seciellerta con dlet #3.1 vlcaseti in sha reipl dusrie /eostiscy/ind lbse solid/ style.css</p>
+        <p class="text-[10px] text-blue-500 font-mono break-all mb-8">
+            html &lt;cpplerfito ai seciellerta con dlet #3.1 vlcaseti in sha reipl dusrie /eostiscy/ind lbse solid/ style.css
+        </p>
         
-        <div class="mb-8">
-            <h3 class="text-sm font-bold mb-4">liexdicry brands</h3>
-            <div class="flex space-x-8 items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Mercedes-Benz_logo_2010.svg/200px-Mercedes-Benz_logo_2010.svg.png" class="brand-logo" alt="brand1">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mercedes-Benz_Logo.svg/1000px-Mercedes-Benz_Logo.svg.png" class="brand-logo" alt="brand2">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Louis_Vuitton_logo_and_wordmark.svg/1200px-Louis_Vuitton_logo_and_wordmark.svg.png" class="brand-logo" alt="brand3">
-                <div class="text-[9px] font-bold text-gray-400">BUNRD<br>MONACO</div>
+        <div class="mb-10">
+            <h3 class="text-xs font-bold uppercase tracking-widest mb-4">liexdicry brands</h3>
+            <div class="flex space-x-10 items-center opacity-50">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Mercedes-Benz_logo_2010.svg/200px-Mercedes-Benz_logo_2010.svg.png" class="brand-logo" alt="B1">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mercedes-Benz_Logo.svg/1000px-Mercedes-Benz_Logo.svg.png" class="brand-logo" alt="B2">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Louis_Vuitton_logo_and_wordmark.svg/1200px-Louis_Vuitton_logo_and_wordmark.svg.png" class="brand-logo" alt="B3">
+                <div class="text-[10px] font-bold leading-none uppercase">BUNRD<br>MONACO</div>
             </div>
         </div>
     </section>
 
-    <section class="p-6 border-b border-gray-100">
-        <h3 class="text-sm font-bold mb-4 uppercase tracking-widest">Featured watch</h3>
-        <div class="flex flex-col md:flex-row gap-6">
+    <section class="max-w-6xl mx-auto p-8 border-b border-gray-100">
+        <h3 class="text-xs font-bold uppercase mb-6 tracking-widest">Featured watch</h3>
+        <div class="flex flex-col md:flex-row gap-10">
             <div class="w-full md:w-1/3">
-                <video autoplay muted loop playsinline class="w-full shadow-sm">
+                <video autoplay muted loop playsinline class="shadow-lg h-64 object-cover">
                     <source src="fuoco.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="w-full md:w-2/3">
-                <h4 class="text-lg font-bold">orologio.jitg</h4>
-                <p class="text-[10px] text-gray-500 mb-2">Asset: FUOCO.MP4 (Issuer: GAEF56G...)</p>
-                <p class="text-xs text-gray-600 leading-relaxed italic">
+                <h4 class="text-xl font-bold mb-2 font-mono">orologio.jitg</h4>
+                <p class="text-[10px] text-gray-400 mb-4">Asset: FUOCO.MP4 | Issuer: GAEF56G...</p>
+                <p class="text-sm text-gray-600 leading-relaxed italic max-w-lg">
                     Esclusivo orolerivo automatico con cassa in cassa e diamice e diamssa e precsion. Un Moveento sviazero di aligta. Un engnaerigre Un design.
                 </p>
-                <p class="text-[10px] mt-4 text-gray-400 italic font-serif">"La precisione del fuoco incontra l'acciaio di Stellar."</p>
+                <div class="mt-6 p-3 bg-gray-50 border-l-2 border-black">
+                    <p class="text-[11px] font-serif">"La precisione del fuoco incontra l'acciaio di Stellar."</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="p-6">
-        <h3 class="text-sm font-bold mb-6">gallery it.ml</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <section class="max-w-6xl mx-auto p-8">
+        <h3 class="text-xs font-bold uppercase mb-8 tracking-widest">gallery it.ml</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
             
-            <div class="text-center">
-                <img src="anellooro.jpg" class="gallery-img mb-2" alt="Anello">
-                <p class="text-[10px]">Anelo1 con Diamo1</p>
+            <div class="gallery-item">
+                <img src="anellooro.jpg" class="h-40 mb-2 shadow-sm" alt="Anello">
+                <p>Anelo1 con Diamo1</p>
             </div>
 
-            <div class="text-center">
-                <video autoplay muted loop playsinline class="gallery-img mb-2">
-                    <source src="prese.mp4
-   
-    
+            <div class="gallery-item">
+                <video autoplay muted loop playsinline class="h-40 mb-2 shadow-sm">
+                    <source src="prese.mp4" type="video/mp4">
+                </video>
+                <p>Collna1 Colrio <span class="text-blue-500">large</span></p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="perle.jpg" class="h-40 mb-2 shadow-sm" alt="Perle">
+                <p>Braciale Ternic <span class="text-blue-500">small</span></p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="fede.jpg" class="h-40 mb-2 shadow-sm" alt="Fede">
+                <p>Bracial1 Ennis <span class="text-blue-500">small</span></p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="citizen.jpg" class="h-40 mb-2 shadow-sm" alt="Citizen">
+                <p>Orologio Citizen <span class="text-blue-500">classic</span></p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="collana.jpg" class="h-40 mb-2 shadow-sm" alt="Collana">
+                <p>Collana Artigianale <span class="text-blue-500">gold</span></p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="p-10 text-[9px] text-gray-400 border-t mt-10 text-center uppercase tracking-
+  
 
 
   
