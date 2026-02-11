@@ -1,97 +1,91 @@
-Se cari<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gioielleria Digitale Stellar</title>
+    <title>Gioielleria Esclusiva - Stellar Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400&display=swap');
-        body { font-family: 'Montserrat', sans-serif; background-color: #fff; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .asset-container img, .asset-container video { 
-            width: 100%; 
-            height: 400px; 
-            object-fit: cover; 
-            border-radius: 4px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+        body { font-family: 'Georgia', serif; background-color: #ffffff; }
+        .token-card:hover { transform: translateY(-5px); transition: 0.3s; }
+        video, img { width: 100%; height: auto; border-radius: 2px; }
     </style>
 </head>
-<body class="text-gray-900">
+<body class="text-gray-800">
 
-    <header class="bg-black text-white p-8 text-center">
-        <h1 class="text-2xl tracking-[0.4em] uppercase">Gioielleria Digitale Stellar</h1>
-        <p class="text-[10px] text-gray-500 mt-2 font-mono">ISSUER: GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS</p>
+    <header class="border-b p-4 flex justify-between items-center bg-white">
+        <div class="flex items-center space-x-2">
+            <img src="citizen.jpg" class="w-10 h-10 rounded-full object-cover" alt="logo">
+            <h1 class="text-xl tracking-widest uppercase">Gioielleria Esclusiva</h1>
+        </div>
+        <div class="text-[10px] text-gray-400 uppercase tracking-widest">
+            Partner Tecnico: Gemini AI
+        </div>
     </header>
 
-    <main class="container mx-auto py-12 px-4">
-        
-        <section class="mb-20">
-            <div class="asset-container">
-                <video autoplay muted loop playsinline>
-                    <source src="fuoco.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="text-center mt-6">
-                <h2 class="text-3xl uppercase">L'Essenza dell'Artigianato</h2>
-                <p class="text-gray-500 italic">Asset reali, sicurezza Blockchain.</p>
-            </div>
-        </section>
+    <section class="p-8 border-b">
+        <h2 class="text-3xl font-light mb-2">hi Gioielleria Esclusiva</h2>
+        <p class="text-xs text-gray-400 font-mono italic">Issuer: GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS</p>
+    </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <section class="max-w-5xl mx-auto p-10 flex flex-col md:flex-row items-center gap-10 border-b">
+        <div class="w-full md:w-1/2">
+            <video autoplay muted loop playsinline class="shadow-lg">
+                <source src="fuoco.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="w-full md:w-1/2">
+            <h3 class="text-2xl font-semibold mb-2 italic underline">L'Arte del Fuoco</h3>
+            <p class="text-gray-600 text-sm mb-6">
+                Esclusivo processo creativo registrato su Blockchain Stellar. 
+                Dalla fusione dell'oro alla creazione del tuo asset digitale unico.
+                Precisione, stile e sicurezza on-chain.
+            </p>
+            <p class="text-[10px] font-mono text-blue-500">VIDEO_REF: FUOCO.MP4</p>
+        </div>
+    </section>
+
+    <section class="p-10 bg-gray-50">
+        <h4 class="text-sm uppercase tracking-[0.3em] mb-10 text-center">Gallery assets</h4>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             
-            <div class="asset-container text-center">
-                <img src="fede.jpg" alt="Fede">
-                <h3 class="mt-4 font-bold uppercase">Fede Nuziale Digitale</h3>
-                <p class="text-xs text-blue-600 font-mono">ASSET: FEDE</p>
+            <div class="token-card bg-white p-4 border shadow-sm">
+                <img src="fede.jpg" alt="Fede" class="mb-4">
+                <p class="font-bold text-sm uppercase italic">Fede1 con Diamo1</p>
+                <p class="text-[10px] text-gray-400">Asset: FEDE</p>
             </div>
 
-            <div class="asset-container text-center">
-                <video autoplay muted loop playsinline>
+            <div class="token-card bg-white p-4 border shadow-sm">
+                <video autoplay muted loop playsinline class="mb-4">
                     <source src="prese.mp4" type="video/mp4">
                 </video>
-                <h3 class="mt-4 font-bold uppercase">Collana d'Autore (Preview)</h3>
-                <p class="text-xs text-blue-600 font-mono">VIDEO: PRESE.MP4</p>
+                <p class="font-bold text-sm uppercase italic">Collana1 Colrio large</p>
+                <p class="text-[10px] text-gray-400">Video: PRESE</p>
             </div>
 
-            <div class="asset-container text-center">
-                <img src="citizen.jpg" alt="Citizen">
-                <h3 class="mt-4 font-bold uppercase">Citizen Watch Token</h3>
-                <p class="text-xs text-blue-600 font-mono">ASSET: CITIZEN</p>
+            <div class="token-card bg-white p-4 border shadow-sm">
+                <img src="anellooro.jpg" alt="Anello" class="mb-4">
+                <p class="font-bold text-sm uppercase italic">Braciale1 Ennis small</p>
+                <p class="text-[10px] text-gray-400">Asset: ANELLO</p>
             </div>
 
-            <div class="asset-container text-center">
-                <img src="anellooro.jpg" alt="Anello">
-                <h3 class="mt-4 font-bold uppercase">Anello Solitario Oro</h3>
-                <p class="text-xs text-blue-600 font-mono">ASSET: ANELLO</p>
-            </div>
-
-            <div class="asset-container text-center">
-                <img src="perle.jpg" alt="Perle">
-                <h3 class="mt-4 font-bold uppercase">Perle Certificate</h3>
-                <p class="text-xs text-blue-600 font-mono">ASSET: PERLE</p>
-            </div>
-
-            <div class="asset-container text-center">
-                <img src="collana.jpg" alt="Collana">
-                <h3 class="mt-4 font-bold uppercase">Collana Artigianale</h3>
-                <p class="text-xs text-blue-600 font-mono">ASSET: COLLANA</p>
+            <div class="token-card bg-white p-4 border shadow-sm">
+                <img src="perle.jpg" alt="Perle" class="mb-4">
+                <p class="font-bold text-sm uppercase italic">Perle Cert1 Large</p>
+                <p class="text-[10px] text-gray-400">Asset: PERLE</p>
             </div>
 
         </div>
-    </main>
+    </section>
 
-    <footer class="p-10 text-center border-t mt-10">
-        <a href=".well-known/stellar.toml" class="text-xs text-yellow-600 uppercase tracking-widest hover:underline">
-            Configurazione Stellar.toml
-        </a>
+    <footer class="p-10 text-center border-t text-[10px] text-gray-400 uppercase tracking-widest bg-white">
+        <p>© 2026 Gioielleria Esclusiva - Blockchain Stellar Network</p>
+        <p class="mt-2 text-yellow-600 underline"><a href=".well-known/stellar.toml">stellar.toml configuration</a></p>
     </footer>
 
 </body>
 </html>
-
-    
       
 
     
