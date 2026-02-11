@@ -1,5 +1,4 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +8,10 @@
     <style>
         body { font-family: 'Georgia', serif; background-color: #ffffff; }
         .token-card:hover { transform: translateY(-5px); transition: 0.3s; }
-        video, img { width: 100%; height: auto; border-radius: 2px; }
+        /* Stile per alternare le grandezze */
+        .img-large { height: 450px; object-fit: cover; }
+        .img-small { height: 250px; object-fit: cover; }
+        video, img { width: 100%; border-radius: 2px; }
     </style>
 </head>
 <body class="text-gray-800">
@@ -19,8 +21,10 @@
             <img src="citizen.jpg" class="w-10 h-10 rounded-full object-cover" alt="logo">
             <h1 class="text-xl tracking-widest uppercase">Gioielleria Esclusiva</h1>
         </div>
-        <div class="text-[10px] text-gray-400 uppercase tracking-widest">
-            Partner Tecnico: Gemini AI
+        <div class="hidden md:block">
+            <div class="relative">
+                <input type="text" placeholder="Cerca gioiello..." class="border rounded-full py-1 px-4 text-sm outline-none focus:border-black">
+            </div>
         </div>
     </header>
 
@@ -29,64 +33,53 @@
         <p class="text-xs text-gray-400 font-mono italic">Issuer: GAEF56GDPD5FJZGMUT5NBNF2PSFXKJWABSSOOCHMXS2NJCAC2G6BWGFS</p>
     </section>
 
-    <section class="max-w-5xl mx-auto p-10 flex flex-col md:flex-row items-center gap-10 border-b">
+    <section class="max-w-6xl mx-auto p-10 flex flex-col md:flex-row items-start gap-10 border-b">
         <div class="w-full md:w-1/2">
-            <video autoplay muted loop playsinline class="shadow-lg">
+            <video autoplay muted loop playsinline class="shadow-lg img-large">
                 <source src="fuoco.mp4" type="video/mp4">
             </video>
         </div>
         <div class="w-full md:w-1/2">
-            <h3 class="text-2xl font-semibold mb-2 italic underline">L'Arte del Fuoco</h3>
-            <p class="text-gray-600 text-sm mb-6">
-                Esclusivo processo creativo registrato su Blockchain Stellar. 
-                Dalla fusione dell'oro alla creazione del tuo asset digitale unico.
-                Precisione, stile e sicurezza on-chain.
+            <h3 class="text-3xl font-semibold mb-4 italic underline">L'Arte del Fuoco & Citizen Watch</h3>
+            <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                Questo asset rappresenta l'unione tra la precisione meccanica e la fusione degli elementi. 
+                Ogni Citizen Watch tokenizzato è garantito dalla nostra riserva fisica.
             </p>
-            <p class="text-[10px] font-mono text-blue-500">VIDEO_REF: FUOCO.MP4</p>
+            <div class="space-y-4 text-sm text-gray-600 border-t pt-4">
+                <p><strong>Dettagli Tecnici:</strong> Orologeria automatica con cassa in diametro 42mm. Movimento svizzero di alta precisione.</p>
+                <p><strong>Blockchain:</strong> Registrato su Stellar Network con 0 decimali per garantire l'unicità del pezzo (1 Token = 1 Orologio).</p>
+                <p><strong>Sicurezza:</strong> Autenticità verificabile tramite l'Issuer Address ufficiale.</p>
+            </div>
         </div>
     </section>
 
     <section class="p-10 bg-gray-50">
-        <h4 class="text-sm uppercase tracking-[0.3em] mb-10 text-center">Gallery assets</h4>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <h4 class="text-sm uppercase tracking-[0.3em] mb-10 text-center italic text-gray-400 underline">Explore Our Collection</h4>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-end">
             
-            <div class="token-card bg-white p-4 border shadow-sm">
-                <img src="fede.jpg" alt="Fede" class="mb-4">
-                <p class="font-bold text-sm uppercase italic">Fede1 con Diamo1</p>
-                <p class="text-[10px] text-gray-400">Asset: FEDE</p>
+            <div class="token-card bg-white p-4 border shadow-sm lg:col-span-2">
+                <img src="fede.jpg" alt="Fede" class="img-large mb-4">
+                <div class="flex justify-between items-center">
+                    <p class="font-bold text-lg uppercase italic">Fede Nuziale Digitale</p>
+                    <p class="text-[10px] text-blue-500 font-mono">CODE: FEDE</p>
+                </div>
             </div>
 
             <div class="token-card bg-white p-4 border shadow-sm">
-                <video autoplay muted loop playsinline class="mb-4">
+                <video autoplay muted loop playsinline class="img-small mb-4">
                     <source src="prese.mp4" type="video/mp4">
                 </video>
-                <p class="font-bold text-sm uppercase italic">Collana1 Colrio large</p>
+                <p class="font-bold text-sm uppercase italic">Collana1 Colrio</p>
                 <p class="text-[10px] text-gray-400">Video: PRESE</p>
             </div>
 
             <div class="token-card bg-white p-4 border shadow-sm">
-                <img src="anellooro.jpg" alt="Anello" class="mb-4">
-                <p class="font-bold text-sm uppercase italic">Braciale1 Ennis small</p>
+                <img src="anellooro.jpg" alt="Anello" class="img-small mb-4">
+                <p class="font-bold text-sm uppercase italic">Anello Solitario Oro</p>
                 <p class="text-[10px] text-gray-400">Asset: ANELLO</p>
-            </div>
+  
 
-            <div class="token-card bg-white p-4 border shadow-sm">
-                <img src="perle.jpg" alt="Perle" class="mb-4">
-                <p class="font-bold text-sm uppercase italic">Perle Cert1 Large</p>
-                <p class="text-[10px] text-gray-400">Asset: PERLE</p>
-            </div>
-
-        </div>
-    </section>
-
-    <footer class="p-10 text-center border-t text-[10px] text-gray-400 uppercase tracking-widest bg-white">
-        <p>© 2026 Gioielleria Esclusiva - Blockchain Stellar Network</p>
-        <p class="mt-2 text-yellow-600 underline"><a href=".well-known/stellar.toml">stellar.toml configuration</a></p>
-    </footer>
-
-</body>
-</html>
-      
 
     
 
